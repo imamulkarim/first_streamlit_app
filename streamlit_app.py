@@ -3,7 +3,6 @@ import pandas
 import requests
 import snowflake.connector
 #
-streamlit.stop()
 
 streamlit.title('My Parents New Healthy Dinner');
 streamlit.header('Breakfast Menu');
@@ -47,6 +46,7 @@ my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contain:")
 streamlit.dataframe(my_data_rows)
 
+streamlit.stop()
 
 fruit_enter = streamlit.text_input('What fruit would you like to add','jackfruit')
 streamlit.write('The user entered ', fruit_enter)
